@@ -26,22 +26,14 @@ public class C05_DosyaYolunuDinamikYapma {
 
          */
 
-        String bilgisayaraOzelBolum = "/Users/ahmetbulutluoz/Desktop/MyDesktop/VideoDersler/Java";
+        // String bilgisayaraOzelBolum = "/Users/ahmetbulutluoz/Desktop/MyDesktop/VideoDersler/Java/Team169_JUnitFramework";
         // bilgisayara ozel bu bolumu Java uzerinden dinamik hale getirebiliriz.
 
-
-
-
-        String herkesteOrtakOlanBolum = "Team169_JUnitFramework/src/test/java/week03_FileTests/deneme.txt";
-
-
-
-
-
+        String bilgisayaraOzelBolum = System.getProperty("user.dir");
+        // System.out.println("Bilgisayara ozel bolum : " + bilgisayaraOzelBolum);
+        String herkesteOrtakOlanBolum = "src/test/java/week03_FileTests/deneme.txt";
 
         String dosyaYolu = bilgisayaraOzelBolum + "/" + herkesteOrtakOlanBolum;
-
-
 
         Assertions.assertTrue(Files.exists(Paths.get(dosyaYolu)));
     }
